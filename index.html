@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--main css file-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Dr.sherif Elmesery dental clinic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+     <!--main css file-->
     <link rel="stylesheet" href="main/style.css">
     <!--render style normally-->
     <link rel="stylesheet" href="main/normalize.css">
     <!--fontawesome library-->
     <link rel="stylesheet" href="main/all.min.css">
     <!--google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- site title -->
-    <title>Dr.sherif Elmesery dental clinic</title>
 </head>
 <body>
     <!--start header-->
     <header>
-        <div class="container">
+        <div class="h-cont">
             <div class="logo">
                 <img src="images/dr.sherif logo.png" alt="dr sherif logo">
             </div>
             <nav class="navigation">
                 <a href="#services">services</a>
                 <a href="#about">about</a>
+                <a href="#reservation">reservation</a>
                 <a href="#contact">contact</a>
+                <i class="fa-solid fa-bars"></i>
             </nav>
         </div>
 
@@ -101,17 +107,72 @@
     <!--end services-->
     <!--start about-->
     <section id="about" class="about-sec">
-        <div class="container">
+        <div>
             <div class="component">
                 <h2>about</h2>
-                <p>we are at the center of the city</p>
+                <p>meet our talented dentist</p>
 
+            </div>
+            <div class="cont">
+                <div>
+                    <img src="images/dr.sherif.png" alt="">
+                </div>
+                <div class="about-txt">
+                    <h2>Dr.Sherif Elmesery</h2>
+                    <p>dental specialist <br> at ministry of health hospitals</p>
+                    <button type="button" class="btn btn-primary"  data-toggle="collapse" data-target="#demo">more info</button>
+                    <div id="demo" class="collapse">
+
+                     <h4>qulifications</h4>
+                     <ul>
+                        <li>bachelor degree in dentistry</li>
+                        <li>diploma degree in endodontics</li>
+                        <li>postgraduate studies in laser in dentistry</li>
+                     </ul>
+                     <h4>experience</h4>
+                     <p>13 years of experience in the dental field</p>
+                     <ul>
+                        <li>5 years : general dentist</li>
+                        <li>6 years : endodontist</li>
+                        <li>2 years : dental team leader</li>
+                     </ul>
+                    </div>
+                </div>
             </div>
 
         </div>
 
     </section>
     <!--end about-->
+    <!-- start reservation -->
+    <section id="reservation">
+        <div class="container">
+            <div class="component">
+                <h2>reservation</h2>
+                <p>book your visit</p>
+            </div>
+            <div>
+                <form action="">
+                    <h1>book</h1>
+                    <p>Please fill in this form .</p>
+                    <label for="name">  patient name</label>
+                    <input type="text" placeholder="enter your name" >
+                    <label for="adress">adress</label>
+                    <input type="text" placeholder="enter you adress">
+                    <label for="age">age</label>
+                    <input type="text" placeholder="enter your age">
+                    <label for="gender">gender</label>
+                    <label for="male">male</label>
+                    <input type="checkbox">
+                    <label for="female">female</label>
+                    <input type="checkbox">
+                    
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    <!-- end reservation -->
 
     
 </body>
