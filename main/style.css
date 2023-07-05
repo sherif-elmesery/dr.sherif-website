@@ -155,13 +155,16 @@ color:#1a1919 ;
     
 }
 .card-container{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 10px;
 }
 .card-container .card{
     margin-bottom: 21px;
-    flex-basis: 24%;
+    /* flex-basis: 24%; */
     padding: 10px;
     background-color: rgb(0 0 0 / 4%);
     margin-left: 5px;
@@ -194,10 +197,14 @@ color:#1a1919 ;
     justify-content: space-around;
     height: 100%;
 }
-.cont
-.about-txt{
+.about-img{
+    width: 50%;
+
+}
+.cont .about-txt{
     padding-top:37px;
     text-align: center;
+    width: 300px;
     /* margin: auto; */
 }
 .about-txt h2{
