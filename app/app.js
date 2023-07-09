@@ -66,3 +66,50 @@ toTop.addEventListener("click", event => {
 
     // Show the first testimonial initially
     showTestimonial(currentIndex);
+
+    // send data to email
+    emailjs.init('cqlPXuNeNuWm-MNbtQLtb');
+
+    function sendEmail(event) {
+      event.preventDefault();
+  
+      // Get form data
+      var form = document.getElementById('reservation-form');
+      var fullName = form.elements['full-name'].value;
+      var dateOfBirth = form.elements['date-of-birth'].value;
+      var gender = form.elements['gender'].value;
+      var contactNumber = form.elements['contact-number'].value;
+      var email = form.elements['email'].value;
+      var preferredDate = form.elements['preferred-date'].value;
+      var preferredTime = form.elements['preferred-time'].value;
+      var serviceRequested = Array.from(form.elements['service']).filter(function(checkbox) {
+        return checkbox.checked;
+      }).map(function(checkbox) {
+        return checkbox.value;
+      });
+      var concerns = form.elements['concerns'].value;
+  
+      // Prepare email parameters
+      var templateParams = {
+        fullName: fullName,
+        dateOfBirth: dateOfBirth,
+        gender: gender,
+        contactNumber: contactNumber,
+        email: email,
+        preferredDate: preferredDate,
+        preferredTime: preferredTime,
+        serviceRequested: serviceRequested.join(', '),
+        concerns: concerns
+      };
+  
+      // Send email using EmailJS
+      emailjs.send('Yservice_ev8cbcs', 'template_ii7xfaf', templateParams)
+        .then(function(response) {
+          console.log('Email sent successfully!', response.status, response.text);
+          alert('Email sent successfully!');
+          form.reset();
+        }, function(error) {
+          console.error('Error sending email:', error);
+          alert('Error sending email. Please try again later.');
+        });
+    }
